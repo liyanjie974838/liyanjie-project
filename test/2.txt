@@ -6,5 +6,5 @@ with sync_playwright() as p:
     page = browser.new_page()				#创建一个新页面
     page.goto("https://www.baidu.com/")		#打开百度网站
     print(page.title())						#显示标签页的标题
-    browser.close()							#关闭创建的浏览器
+    browser.close()							#关 2闭创建的浏览器
 
