@@ -1,0 +1,10 @@
+from playwright.sync_api import sync_playwright
+
+
+with sync_playwright() as p:
+    browser = p.chromium.launch()			# 启动chrome浏览器
+    page = browser.new_page()				#创建一个新页面
+    page.goto("https://www.baidu.com/")		#打开百度网站
+    print(page.title())						#显示标签页的标题
+    browser.close()							#关闭创建的浏览器
+
